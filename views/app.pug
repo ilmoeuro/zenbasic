@@ -1,0 +1,24 @@
+html(lang='en')
+  head
+    title Title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='A pastebin for sharing code and other text files')
+    style !{css}
+    link(rel='shortcut icon' type='image/x-icon' href='/favicon.ico')
+    if devMode
+      link(rel='canonical', href='https://zenbasic.ga/')
+    script(src='js/wwwbasic.js')
+body.loading
+    if devMode
+      .dev-mode
+        | This is a developer preview. Please visit 
+        a(href='https://zenbasic.ga/')  zenbasic.ga
+        |  to see the actual site
+    div(id='basicForm')
+      input(type='text', id='command')
+      button(type='button' id='execute') Execute
+    p.about
+      | All pastes are deleted after 24 hours. 
+      a(href='https://glitch.com/edit/#!/programming-pastebin') Source code.
+      |  Wanna contribute? Ask in <code>##programming</code> on Freenode
+    script(src='js/app.js')
