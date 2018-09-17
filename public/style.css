@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+body > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  body > * {
+    padding-left: calc(50vw - 24rem);
+    padding-right: calc(50vw - 24rem);
+  }
+}
+
+canvas {
+  max-width: 48rem;
+}
+
+body.loading {
+  display: block;
+}
+
+a {
+  color: yellow;
+}
+
+.dev-mode {
+  background-color: yellow;
+  color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dev-mode a {
+  color: blue;
+}
